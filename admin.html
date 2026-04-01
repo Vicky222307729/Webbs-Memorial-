@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | Webbs Memorial Orphanage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="admin-page">
+    <main class="admin-shell">
+      <section class="admin-hero">
+        <p class="eyebrow">Admin Panel</p>
+        <h1>Track donations and monitor supporter activity.</h1>
+        <p class="hero-text">
+          Sign in to review contributions, totals, and recent donor messages for Webbs Memorial Orphanage.
+        </p>
+      </section>
+
+      <section class="admin-grid">
+        <div class="admin-card" id="loginCard">
+          <h2>Admin Login</h2>
+          <p>Use the default credentials to enter the dashboard.</p>
+          <form id="loginForm" class="stack-form">
+            <label>
+              Username
+              <input type="text" name="username" value="admin" required />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" value="admin123" required />
+            </label>
+            <button type="submit" class="button button-primary submit-button">Sign In</button>
+            <p class="form-status" id="loginStatus" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="admin-card admin-dashboard hidden" id="dashboardCard">
+          <div class="dashboard-topbar">
+            <div>
+              <h2>Donation Dashboard</h2>
+              <p id="adminGreeting">Welcome back.</p>
+            </div>
+            <button class="button button-secondary" id="logoutButton" type="button">Logout</button>
+          </div>
+
+          <div class="admin-stats" id="adminStats"></div>
+
+          <div class="table-wrap">
+            <table class="donation-table">
+              <thead>
+                <tr>
+                  <th>Donor</th>
+                  <th>Amount</th>
+                  <th>Purpose</th>
+                  <th>Contact</th>
+                  <th>Message</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="donationTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/admin.js"></script>
+  </body>
+</html>

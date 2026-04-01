@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webbs Memorial Orphanage</title>
+    <meta
+      name="description"
+      content="Webbs Memorial Orphanage is a caring children's home that provides shelter, education, healthcare, and hope for every child."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">Webbs Memorial Orphanage</div>
+        <div class="nav-actions">
+          <a class="nav-link" href="#donate">Donate</a>
+          <a class="nav-link" href="/admin.html">Admin</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <p class="eyebrow">Children's Home</p>
+        <h1>A loving home where every child is safe, valued, and encouraged to dream.</h1>
+        <p class="hero-text" id="tagline">
+          Building a brighter future through care, education, and hope.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#donate">Donate Now</a>
+          <a class="button button-secondary" href="#about">Learn More</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section-light" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About Us</p>
+          <h2>Compassion, protection, and opportunity for every child.</h2>
+        </div>
+        <div class="about-grid">
+          <article class="card large-card">
+            <h3>Who We Are</h3>
+            <p id="aboutText"></p>
+          </article>
+          <article class="card accent-card">
+            <h3>Our Mission</h3>
+            <p id="missionText"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-accent">
+        <div class="section-heading centered">
+          <p class="eyebrow">Our Impact</p>
+          <h2>Changing lives with consistent care and support.</h2>
+        </div>
+        <div class="stats" id="stats"></div>
+      </section>
+
+      <section class="section section-light" id="programs">
+        <div class="section-heading">
+          <p class="eyebrow">Programs</p>
+          <h2>Services that help children grow in confidence and dignity.</h2>
+        </div>
+        <div class="program-list" id="programList"></div>
+      </section>
+
+      <section class="section section-gold" id="donate">
+        <div class="section-heading">
+          <p class="eyebrow">Donate</p>
+          <h2>Your support can change a child's tomorrow.</h2>
+        </div>
+        <div class="donation-layout">
+          <article class="card donation-info">
+            <h3>Where your donation helps</h3>
+            <p>Each contribution helps us provide food, education, medical care, and a stable home for children.</p>
+            <div class="impact-list" id="impactList"></div>
+          </article>
+
+          <form class="donation-form" id="donationForm">
+            <div class="form-grid">
+              <label>
+                Full Name
+                <input type="text" name="donorName" placeholder="Your full name" required />
+              </label>
+              <label>
+                Email Address
+                <input type="email" name="donorEmail" placeholder="you@example.com" required />
+              </label>
+            </div>
+
+            <div class="form-grid">
+              <label>
+                Phone Number
+                <input type="tel" name="phone" placeholder="+91 98765 43210" />
+              </label>
+              <label>
+                Donation Amount
+                <input type="number" name="amount" min="1" step="0.01" placeholder="5000" required />
+              </label>
+            </div>
+
+            <label>
+              Donation Purpose
+              <select name="purpose" required>
+                <option value="">Select a purpose</option>
+                <option value="Education Support">Education Support</option>
+                <option value="Food and Nutrition">Food and Nutrition</option>
+                <option value="Medical Care">Medical Care</option>
+                <option value="General Fund">General Fund</option>
+              </select>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Share a note of encouragement"></textarea>
+            </label>
+
+            <button class="button button-primary submit-button" type="submit">Submit Donation</button>
+            <p class="form-status" id="donationStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="contact">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Partner with us to support and uplift children in need.</h2>
+        </div>
+        <div class="contact-panel">
+          <div>
+            <h3>Get in Touch</h3>
+            <p>If you would like to donate, volunteer, or learn more, please contact us.</p>
+          </div>
+          <div class="contact-details" id="contactDetails"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Webbs Memorial Orphanage. All rights reserved.</p>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

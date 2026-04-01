@@ -1,0 +1,16 @@
+{
+  "name": "webbs-memorial-orphanage",
+  "version": "1.0.0",
+  "description": "Full-stack website for Webbs Memorial Orphanage",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "orphanage",
+    "children-home",
+    "website",
+    "full-stack"
+  ],
+  "license": "MIT"
+}
